@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
-import { GeneralAlert } from '../interfaces/general-alert';
+import { GeneralAlert } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root',

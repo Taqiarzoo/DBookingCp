@@ -7,14 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { PlacesPageRoutingModule } from './places-routing.module';
 
 import { PlacesPage } from './places.page';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    PlacesPageRoutingModule
-  ],
-  declarations: [PlacesPage]
+  imports: [CommonModule, FormsModule, IonicModule, PlacesPageRoutingModule],
+  declarations: [PlacesPage],
 })
 export class PlacesPageModule {}

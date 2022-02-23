@@ -6,19 +6,26 @@ import { PlacesPage } from './places.page';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/places/tabs/discover',
+    pathMatch: 'full',
+  },
+  {
+    path: 'tabs',
     component: PlacesPage,
-  },
-  {
-    path: 'discover',
-    loadChildren: () =>
-      import('./discover/discover-routing.module').then(
-        (m) => m.DiscoverPageRoutingModule
-      ),
-  },
-  {
-    path: 'offers',
-    loadChildren: () =>
-      import('./offers/offers.module').then((m) => m.OffersPageModule),
+    children: [
+      {
+        path: 'discover',
+        loadChildren: () =>
+          import('./discover/discover-routing.module').then(
+            (m) => m.DiscoverPageRoutingModule
+          ),
+      },
+      {
+        path: 'offers',
+        loadChildren: () =>
+          import('./offers/offers.module').then((m) => m.OffersPageModule),
+      },
+    ],
   },
 ];
 
